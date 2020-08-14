@@ -1,4 +1,5 @@
 import { CountDownSong } from '../lib/bottles';
+import { testPlaysVerseRole } from '../lib/helpers';
 
 describe('CountDownSong', () => {
   test('verse', () => {
@@ -36,3 +37,7 @@ class FakeVerse {
     return `This is verse ${number}\n`;
   }
 }
+
+describe('FakeVerse', () => {
+  testPlaysVerseRole(FakeVerse);
+});
